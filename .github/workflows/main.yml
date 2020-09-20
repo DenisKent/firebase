@@ -13,18 +13,13 @@ jobs:
     name: build bundle
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: install & build app
+      - uses: actions/checkout@v2
+
+      - name: Install & Build
         run: |
           npm ci
           npm build
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
+
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
