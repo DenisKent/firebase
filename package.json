@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack/webpack.dev.js",
     "build": "webpack --config webpack/webpack.prod.js",
-    "deploy": "npm run build && firebase deploy"  
+    "deploy": "npm run build && firebase deploy"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^7.21.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

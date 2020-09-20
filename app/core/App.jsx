@@ -1,9 +1,13 @@
 import React from 'react'
+import Router from "./Router";
+import { UserContextProvider } from "app/store/userContext";
+
+
 
 export default function App() {
     return (
-        <div>
-            <h1>Hello world 4</h1>
-        </div>
+        <UserContextProvider>
+            <Router/>
+        </UserContextProvider>
     )
 }
